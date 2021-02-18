@@ -1,4 +1,4 @@
-﻿# A Terraform module to create a subset of cloud components
+# A Terraform module to create a subset of cloud components
 # Copyright (C) 2020 IQ3 CLOUD Solutions Direkt GmbH
 
 # This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 # https://github.com/iq3cloud-dev/terraform-azurerm-iq3-vnet
 
 variable "resource_group_name" {
-  type = string
+  type        = string
   description = "name of resorcegroup. Should be the same as the parrent virtual machine"
 }
 
@@ -44,24 +44,24 @@ variable "sp_client_secret" {
 
 variable "hours" {
   type        = list(string)
-  default = ["12"]
+  default     = ["12"]
   description = "Hour when the scheduler should start."
 }
 
 variable "minutes" {
   type        = list(number)
-  default = [0]
+  default     = [0]
   description = "Minute of hour when the scheduler should start."
 }
 
 variable "week_days" {
   type        = list(string)
-  default = ["Monday","Tuesday","Wednesday","Thursday","Friday"]
+  default     = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
   description = "week days when the scheduler should be executed"
 }
 
 variable "time_zone" {
   type        = string
-  default = "W. Europe Standard Time"
+  default     = "W. Europe Standard Time"
   description = "Time zone. default is 'W. Europe Standard Time'."
 }
